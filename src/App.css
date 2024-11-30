@@ -122,13 +122,9 @@ body {
   padding: 100px 40px;
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
+/* Section titles (ABOUT ME, WORK EXPERIENCE, PROJECT EXPERIENCE) */
 .section-header h2 {
-  font-size: 4rem;
+  font-size: 4rem;  /* Same as WORK EXPERIENCE, PROJECT EXPERIENCE */
   font-weight: bold;
   text-transform: uppercase;
   background: linear-gradient(90deg, #ff8a00, #e52e71);
@@ -136,34 +132,105 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientAnimation 5s ease-in-out infinite;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.section-content {
+/* About Me Section */
+.about-section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  padding: 50px 0;
 }
 
-.section-left {
-  width: 50%;
-  text-align: left;
+.about-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 60%;
+  text-align: left; /* Keep it left aligned */
 }
 
-.section-left p {
-  font-size: 1.5rem;
+.about-text {
+  font-size: 1.8rem;  /* Larger text for the description */
   color: #d3d3d3;
+  line-height: 1.6;
+  margin-top: 10px;
 }
 
-.section-right {
-  width: 40%;
+.about-highlight {
+  color: #ff8a00;
+  font-weight: 600;
+}
+
+.about-right {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40%; /* Space for the image */
 }
 
-.section-right img {
+.about-right img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #ff8a00;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.card {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
   width: 100%;
-  border-radius: 15px; /* Makes the image rounder */
+  max-width: 500px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.see-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.see-more-button {
+  padding: 10px 20px;
+  background-color: #ff8a00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-button:hover {
+  background-color: #e52e71;
 }
 
 @keyframes gradientAnimation {

@@ -2,7 +2,7 @@
 
 **Author:** Anahad Dhaliwal  
 **Email:** [addhaliw@uwaterloo.ca](mailto:addhaliw@uwaterloo.ca)  
-**Website:** *(To be decided)*
+**Website:** www.anahadd.com
 
 ## Overview
 I’ve always been excited by the idea of creating my own personal website, but I never had the courage to actually go forward with it - now I finally have. This website was simply built with React and a bunch of styling. 

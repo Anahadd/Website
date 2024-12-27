@@ -73,7 +73,7 @@ const Header = () => {
         "UniFlow is an AI-powered platform for managing university applications. It helps students streamline the process with features like personalized scholarship matching, AI-driven mock interviews, and contextual essay writing assistance.",
       image: p2,
       award: {
-        text: "Featured Project",
+        text: "Ignition Hacks Project",
       },
       technologies: [
         "React",
@@ -96,7 +96,7 @@ const Header = () => {
       title: "Arduino-based Thermochromic Printer",
       description:
         "This Arduino-powered thermochromic printer was designed for an eco-friendly hackathon to reduce paper waste. By applying precise heat to thermochromic ink, it erases existing text and reverts used sheets back to a clean state, providing a low-cost, sustainable alternative for everyday printing needs.",
-      technologies: ["Arduino", "C/C++"],
+      technologies: ["Arduino", "C/C++", "Hardware Design"],
       githubLink: "https://github.com/yourusername/csv-to-json",
     },
     {
@@ -113,7 +113,7 @@ const Header = () => {
       title: "The HolyGrail",
       description:
         "HolyGrail is a top-down 2D adventure game built in Java. Players navigate through a dynamic world, battling enemies, collecting the Holy Grail, and restoring peace. The game features random enemy spawning, a multi-class object-oriented structure for efficient code organization, and timers for gameplay mechanics like enemy movement and attack intervals. The project demonstrates skills in game design, Java programming, and implementing interactive gameplay systems.",
-      technologies: ["Java", "Java Swing"],
+      technologies: ["Java", "Java Swing", "Game Development"],
       githubLink: "https://github.com/yourusername/image-resizer",
     },
     {
@@ -542,223 +542,202 @@ const Header = () => {
 
         {/* EXPERIENCE SECTION */}
         <section
-          id="experience"
-          className="min-h-screen py-40 max-w-6xl mx-auto"
-        >
-          <h2
-            className={`text-6xl font-extrabold mb-16 relative ${
-              darkMode ? "text-white" : "text-gray-900"
-            }`}
-          >
-            <span
-              className="text-purple-500 font-urbanist"
-              style={{ fontSize: "50px" }}
-            >
-              02.
-            </span>
-            <span className="ml-2" style={{ fontSize: "50px" }}>
-              Work Experience
-            </span>
-            <div className="absolute -bottom-4 left-0 w-full h-[1px] bg-gradient-to-r from-purple-500/40 to-transparent"></div>
-          </h2>
+  id="experience"
+  className="min-h-screen py-40 max-w-6xl mx-auto"
+>
+  <h2
+    className={`text-6xl font-extrabold mb-16 relative ${
+      darkMode ? "text-white" : "text-gray-900"
+    }`}
+  >
+    <span
+      className="text-purple-500 font-urbanist"
+      style={{ fontSize: "50px" }}
+    >
+      02.
+    </span>
+    <span className="ml-2" style={{ fontSize: "50px" }}>
+      Work Experience
+    </span>
+    <div className="absolute -bottom-4 left-0 w-full h-[1px] bg-gradient-to-r from-purple-500/40 to-transparent"></div>
+  </h2>
 
-          <div className="relative">
-            {/* The vertical line in background */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#9448ff] to-[#c861ff] opacity-20" />
-            <div className="relative space-y-24">
-              {/* Timeline Item 1 */}
-              <div className="timeline-item opacity-0 flex justify-start w-full">
-                <div className="w-[700px] pr-16 relative">
-                  <div className="absolute right-0 top-1/2 transform translate-x-4 -translate-y-1/2 w-16 h-1 bg-gradient-to-r from-[#9448ff] to-[#c861ff]" />
-                  <div
-                    className={`${
-                      darkMode ? "bg-gray-800" : "bg-white"
-                    } p-7 rounded-xl shadow-lg hover:shadow-xl transition-shadow`}
-                  >
-                    <div className="text-gray-400 text-base font-medium mb-2">
-                      JULY — AUG 2024
-                    </div>
-                    <h3 className="flex items-center whitespace-nowrap text-2xl font-bold mb-4">
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={darkMode ? "text-white" : "text-gray-900"}
-                        >
-                          Software Engineer Intern @
-                        </span>
-                        <a
-                          href="https://www.joinprequel.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="gradient-text hover:opacity-80 transition-opacity inline-flex items-center gap-1"
-                        >
-                          Prequel
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      </div>
-                    </h3>
-
-                    <ul className="space-y-4 mb-6">
-                      <li
-                        className={`flex gap-3 ${
-                          darkMode ? "text-gray-300" : "text-gray-400"
-                        } text-lg font-medium`}
-                      >
-                        <span className="text-[#9448ff] text-[18px] mt-1">
-                          ▹
-                        </span>
-                        At Prequel, I worked closely with their Software
-                        Engineers to further develop their AI model, Poppy, as
-                        well as to create new features for their website. I
-                        learned some pretty cool things, ranging from web design
-                        to product analytics.
-                      </li>
-                      <li
-                        className={`flex gap-3 ${
-                          darkMode ? "text-gray-300" : "text-gray-400"
-                        } text-lg font-medium`}
-                      >
-                        <span className="text-[#9448ff] text-[18px] mt-1">
-                          ▹
-                        </span>
-                        During my time, I developed a genetic algorithm that
-                        streamlined team assignments, saving up to 10 hours for
-                        student coordinators. I also trained their model by
-                        vector indexing over 30 hours of start-up meeting data,
-                        significantly improving its accuracy, and wrote a report
-                        analyzing the model&apos;s performance under various
-                        conditions.
-                      </li>
-                      <li
-                        className={`flex gap-3 ${
-                          darkMode ? "text-gray-300" : "text-gray-400"
-                        } text-lg font-medium`}
-                      >
-                        <span className="text-[#9448ff] text-[18px] mt-1">
-                          ▹
-                        </span>
-                        Overall, this internship taught me a great deal about
-                        the market research aspect of software development, as
-                        we continuously implemented improvements based on
-                        consumer feedback.
-                      </li>
-                    </ul>
-
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        "React",
-                        "Typescript",
-                        "PostgresSQL",
-                        "Python",
-                        "Git",
-                        "UI/UX",
-                      ].map((skill) => (
-                        <span
-                          key={skill}
-                          className={`px-3 py-1 text-base font-medium rounded-full ${
-                            darkMode
-                              ? "bg-purple-500/10 text-purple-300"
-                              : "bg-purple-500/5 text-purple-600"
-                          }`}
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+  <div className="relative">
+    {/* The vertical line in background */}
+    <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#9448ff] to-[#c861ff] opacity-20" />
+    
+    <div className="relative space-y-24">
+      {/* Timeline Item 1 - Prequel */}
+      <div className="timeline-item opacity-0 flex justify-start w-full">
+        <div className="w-[700px] pr-16 relative">
+          <div className="absolute right-0 top-1/2 transform translate-x-4 -translate-y-1/2 w-16 h-1 bg-gradient-to-r from-[#9448ff] to-[#c861ff]" />
+          <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-7 rounded-xl shadow-lg hover:shadow-xl transition-shadow`}>
+            <div className="text-gray-400 text-base font-medium mb-2">
+              JULY — AUG 2024
+            </div>
+            <h3 className="flex items-center whitespace-nowrap text-2xl font-bold mb-4">
+              <div className="flex items-center gap-2">
+                <span className={darkMode ? "text-white" : "text-gray-900"}>
+                  Software Engineer Intern @
+                </span>
+                <a
+                  href="https://www.joinprequel.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="gradient-text hover:opacity-80 transition-opacity inline-flex items-center gap-1"
+                >
+                  Prequel
+                  <ExternalLink className="w-4 h-4" />
+                </a>
               </div>
+            </h3>
 
-              {/* Timeline Item 2 */}
-              <div className="timeline-item opacity-0 flex justify-end w-full">
-                <div className="w-[700px] pl-16 relative mr-[10%]">
-                  <div className="absolute left-0 top-1/2 transform -translate-x-4 -translate-y-1/2 w-16 h-1 bg-gradient-to-l from-[#9448ff] to-[#c861ff]" />
-                  <div
-                    className={`${
-                      darkMode ? "bg-gray-800" : "bg-white"
-                    } p-7 rounded-xl shadow-lg hover:shadow-xl transition-shadow`}
-                  >
-                    <div className="text-gray-400 text-base font-medium mb-2">
-                      SEPT 2023 — FEB 2024
-                    </div>
-                    <h3 className="flex items-center whitespace-nowrap text-2xl font-bold mb-4">
-                      <div className="flex items-center gap-2">
-                        <span
-                          className={darkMode ? "text-white" : "text-gray-900"}
-                        >
-                          Software Engineer Intern @
-                        </span>
-                        <a
-                          href="https://virtuallabs.network/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="gradient-text hover:opacity-80 transition-opacity inline-flex items-center gap-1"
-                        >
-                          Virtual Labs
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      </div>
-                    </h3>
-                    <ul className="space-y-4 mb-6">
-                      <li
-                        className={`flex gap-3 ${
-                          darkMode ? "text-gray-300" : "text-gray-400"
-                        } text-lg font-medium`}
-                      >
-                        <span className="text-[#9448ff] text-[18px] mt-1">
-                          ▹
-                        </span>
-                        Virtual Labs (previously known as Ontropy) was my first internship, where I got to
-                        learn about blockchain, smart contracts, and how it
-                        connects with game development. Working with José Betancourt, former Yale student, and his team of Harvard-educated software engineers was an eye-opening experience.                      
-                      </li>
-        
+            <ul className="space-y-4 mb-6">
+              <li className={`flex gap-3 ${darkMode ? "text-gray-300" : "text-gray-400"} text-lg font-medium`}>
+                <span className="text-[#9448ff] text-[18px] mt-1">▹</span>
+                At Prequel, I worked closely with their Software Engineers to further develop their AI model, Poppy, as well as to create new features for their website. I learned some pretty cool things, ranging from web design to product analytics.
+              </li>
+              <li className={`flex gap-3 ${darkMode ? "text-gray-300" : "text-gray-400"} text-lg font-medium`}>
+                <span className="text-[#9448ff] text-[18px] mt-1">▹</span>
+                During my time, I developed a genetic algorithm that streamlined team assignments, saving up to 10 hours for student coordinators. I also trained their model by vector indexing over 30 hours of start-up meeting data, significantly improving its accuracy, and wrote a report analyzing the model's performance under various conditions.
+              </li>
+              <li className={`flex gap-3 ${darkMode ? "text-gray-300" : "text-gray-400"} text-lg font-medium`}>
+                <span className="text-[#9448ff] text-[18px] mt-1">▹</span>
+                Overall, this internship taught me a great deal about the market research aspect of software development, as we continuously implemented improvements based on consumer feedback.
+              </li>
+            </ul>
 
-                      <li
-                        className={`flex gap-3 ${
-                          darkMode ? "text-gray-300" : "text-gray-400"
-                        } text-lg font-medium`}
-                      >
-                        <span className="text-[#9448ff] text-[18px] mt-1">
-                          ▹
-                        </span>
-                        During my time there, I integrated their Unity Software Development Kit by developing a 3D First-Person Shooter in Unity, incorporating an in-game currency powered by smart contracts and blockchain technology. I identified and reported bugs or issues to the team prior to the Unity SDK's market release.
-                      </li>
-
-
-                      <li
-                        className={`flex gap-3 ${
-                          darkMode ? "text-gray-300" : "text-gray-400"
-                        } text-lg font-medium`}
-                      >
-                        <span className="text-[#9448ff] text-[18px] mt-1">
-                          ▹
-                        </span>
-
-                                    In the end, I learned a lot about cryptography, blockchain, and game development, and I got a better understanding of how cryptocurrency works. I also had the chance to meet a team of cryptography experts with PhDs, and talking to them was really inspiring.        
-                                              
-                                              </li>
-                    </ul>
-                    <div className="flex flex-wrap gap-2">
-                      {["Unity", "C#", "Solidity", "Git"].map((skill) => (
-                        <span
-                          key={skill}
-                          className={`px-3 py-1 text-base font-medium rounded-full ${
-                            darkMode
-                              ? "bg-purple-500/10 text-purple-300"
-                              : "bg-purple-500/5 text-purple-600"
-                          }`}
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Add more timeline items if needed */}
+            <div className="flex flex-wrap gap-2">
+              {["React", "Typescript", "PostgresSQL", "Python", "Git", "UI/UX"].map((skill) => (
+                <span
+                  key={skill}
+                  className={`px-3 py-1 text-base font-medium rounded-full ${
+                    darkMode
+                      ? "bg-purple-500/10 text-purple-300"
+                      : "bg-purple-500/5 text-purple-600"
+                  }`}
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+
+      {/* Timeline Item 2 - Virtual Labs */}
+      <div className="timeline-item opacity-0 flex justify-end w-full">
+        <div className="w-[700px] pl-16 relative mr-[10%]">
+          <div className="absolute left-0 top-1/2 transform -translate-x-4 -translate-y-1/2 w-16 h-1 bg-gradient-to-l from-[#9448ff] to-[#c861ff]" />
+          <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-7 rounded-xl shadow-lg hover:shadow-xl transition-shadow`}>
+            <div className="text-gray-400 text-base font-medium mb-2">
+              SEPT 2023 — FEB 2024
+            </div>
+            <h3 className="flex items-center whitespace-nowrap text-2xl font-bold mb-4">
+              <div className="flex items-center gap-2">
+                <span className={darkMode ? "text-white" : "text-gray-900"}>
+                  Software Engineer Intern @
+                </span>
+                <a
+                  href="https://virtuallabs.network/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="gradient-text hover:opacity-80 transition-opacity inline-flex items-center gap-1"
+                >
+                  Virtual Labs
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
+            </h3>
+
+            <ul className="space-y-4 mb-6">
+              <li className={`flex gap-3 ${darkMode ? "text-gray-300" : "text-gray-400"} text-lg font-medium`}>
+                <span className="text-[#9448ff] text-[18px] mt-1">▹</span>
+                Virtual Labs (previously known as Ontropy) was my first internship, where I got to learn about blockchain, smart contracts, and how it connects with game development. Working with José Betancourt, former Yale student, and his team of Harvard-educated software engineers was an eye-opening experience.
+              </li>
+              <li className={`flex gap-3 ${darkMode ? "text-gray-300" : "text-gray-400"} text-lg font-medium`}>
+                <span className="text-[#9448ff] text-[18px] mt-1">▹</span>
+                During my time there, I integrated their Unity Software Development Kit by developing a 3D First-Person Shooter in Unity, incorporating an in-game currency powered by smart contracts and blockchain technology. I identified and reported bugs or issues to the team prior to the Unity SDK's market release.
+              </li>
+              <li className={`flex gap-3 ${darkMode ? "text-gray-300" : "text-gray-400"} text-lg font-medium`}>
+                <span className="text-[#9448ff] text-[18px] mt-1">▹</span>
+                In the end, I learned a lot about cryptography, blockchain, and game development, and I got a better understanding of how cryptocurrency works. I also had the chance to meet a team of cryptography experts with PhDs, and talking to them was really inspiring.
+              </li>
+            </ul>
+
+            <div className="flex flex-wrap gap-2">
+              {["Unity", "C#", "Solidity", "Git", "Blockchain", "Smart Contracts"].map((skill) => (
+                <span
+                  key={skill}
+                  className={`px-3 py-1 text-base font-medium rounded-full ${
+                    darkMode
+                      ? "bg-purple-500/10 text-purple-300"
+                      : "bg-purple-500/5 text-purple-600"
+                  }`}
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Timeline Item 3 - Your New Position */}
+      <div className="timeline-item opacity-0 flex justify-start w-full">
+        <div className="w-[700px] pr-16 relative">
+          <div className="absolute right-0 top-1/2 transform translate-x-4 -translate-y-1/2 w-16 h-1 bg-gradient-to-r from-[#9448ff] to-[#c861ff]" />
+          <div className={`${darkMode ? "bg-gray-800" : "bg-white"} p-7 rounded-xl shadow-lg hover:shadow-xl transition-shadow`}>
+            <div className="text-gray-400 text-base font-medium mb-2">
+              DEC 2022 — APR 2023
+            </div>
+            <h3 className="flex items-center whitespace-nowrap text-2xl font-bold mb-4">
+              <div className="flex items-center gap-2">
+                <span className={darkMode ? "text-white" : "text-gray-900"}>
+                  Web Developer @
+                </span>
+                <a
+                  className="gradient-text hover:opacity-80 transition-opacity inline-flex items-center gap-1"
+                >
+                  KeyTurn Digital
+                </a>
+              </div>
+            </h3>
+
+            <ul className="space-y-4 mb-6">
+              <li className={`flex gap-3 ${darkMode ? "text-gray-300" : "text-gray-400"} text-lg font-medium`}>
+                <span className="text-[#9448ff] text-[18px] mt-1">▹</span>
+                Co-founded a web development startup through BETA Camp's entrepreneurship program, focusing on creating customized website solutions for young entrepreneurs. Led client communications and managed the full project lifecycle from requirements gathering to deployment.
+              </li>
+              <li className={`flex gap-3 ${darkMode ? "text-gray-300" : "text-gray-400"} text-lg font-medium`}>
+                <span className="text-[#9448ff] text-[18px] mt-1">▹</span>
+                Developed responsive and modern websites using React, Next.js, and Tailwind CSS, implementing custom features and integrations based on client requirements. Maintained consistent communication with clients to ensure satisfaction and timely delivery of projects.
+              </li>
+              <li className={`flex gap-3 ${darkMode ? "text-gray-300" : "text-gray-400"} text-lg font-medium`}>
+                <span className="text-[#9448ff] text-[18px] mt-1">▹</span>
+                Generated over $500 in revenue within 10 weeks and pitched to investors for $10K funding opportunity. Participated in exclusive mentorship sessions with industry leaders, including the CEO of Databricks and experienced software engineers from top tech companies.
+              </li>
+            </ul>
+            <div className="flex flex-wrap gap-2">
+              {["React", "Next.js", "Tailwind CSS", "Client Relations", "Entrepreneurship"].map((skill) => (
+                <span
+                  key={skill}
+                  className={`px-3 py-1 text-base font-medium rounded-full ${
+                    darkMode
+                      ? "bg-purple-500/10 text-purple-300"
+                      : "bg-purple-500/5 text-purple-600"
+                  }`}
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* PROJECTS SECTION */}
         <section

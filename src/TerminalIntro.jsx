@@ -9,6 +9,10 @@ import {
   Mail,
   Award
 } from 'lucide-react';
+import hosaImage from './models/hosa_healthcare.png'
+import p2 from './models/hosa_healthcare.png'
+import p3 from './models/hosa_healthcare.png'
+import p4 from './models/hosa_healthcare.png'
 
 const Header = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -23,7 +27,7 @@ const Header = () => {
       title: "EasyCura - AI Healthcare App",
       description:
         "Built with the MERN stack (MongoDB, Express, React, Node.js), this AI-powered tool pulls hospital and healthcare provider data from an external API, then helps users find nearby hospitals suited to their needs. It aims to reduce wait times, connect patients with the right specialists, and offer a more efficient healthcare experience.",
-      image: "src/models/hosa_healthcare.png",
+      image: hosaImage,
       award: {
         icon: "🏆",
         text: "Top 10",
@@ -42,30 +46,10 @@ const Header = () => {
         "https://drive.google.com/file/d/1FpdQ81B61yNbiCV0ve0V_cmMlgUMntKR/view?usp=sharing",
     },
     {
-      title: "UniFlow - AI Coaching App",
-      description:
-        "UniFlow is an AI-powered platform for managing university applications. It helps students streamline the process with features like personalized scholarship matching, AI-driven mock interviews, and contextual essay writing assistance.",
-      image: "src/models/your_project_image.png",
-      award: {
-        text: "Featured Project",
-      },
-      technologies: [
-        "React",
-        "Flask",
-        "Tailwind CSS",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "AWS",
-      ],
-      githubLink: "https://github.com/Anahadd/UniFlow",
-      externalLink: "https://your-project-demo-link.com",
-    },
-    {
       title: "CryptoTrader Pro",
       description:
         "An advanced cryptocurrency trading platform that leverages ML to predict market trends and execute automated trades, integrating with multiple exchanges.",
-      image: "src/models/crypto_trader.png",
+      image: p3,
       award: {
         icon: "🌟",
         text: "Best Tech Innovation",
@@ -83,19 +67,26 @@ const Header = () => {
       githubLink: "https://github.com/yourusername/cryptotrader",
       externalLink: "https://cryptotrader-demo.com",
     },
-    // 4th project (filler)
     {
-      title: "HolyGrail - 2D Java Game",
+      title: "UniFlow - AI Coaching App",
       description:
-        "HolyGrail is a top-down 2D adventure game in Java. The player’s objective is to conquer enemies, collect the Holy Grail, and restore peace, showcasing random spawning, multi-class structure, and timers.",
-      image: "src/models/placeholder4.png",
+        "UniFlow is an AI-powered platform for managing university applications. It helps students streamline the process with features like personalized scholarship matching, AI-driven mock interviews, and contextual essay writing assistance.",
+      image: p2,
       award: {
         text: "Featured Project",
       },
-      technologies: ["Java", "Swing", "Object Oriented Programming"],
-      githubLink: "https://github.com/yourusername/project4",
-      externalLink: "https://yourproject4-demo.com",
-    }
+      technologies: [
+        "React",
+        "Flask",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "AWS",
+      ],
+      githubLink: "https://github.com/Anahadd/UniFlow",
+      externalLink: "https://your-project-demo-link.com",
+    },
   ];
 
   // Additional Projects
@@ -107,32 +98,30 @@ const Header = () => {
         "This Arduino-powered thermochromic printer was designed for an eco-friendly hackathon to reduce paper waste. By applying precise heat to thermochromic ink, it erases existing text and reverts used sheets back to a clean state, providing a low-cost, sustainable alternative for everyday printing needs.",
       technologies: ["Arduino", "C/C++"],
       githubLink: "https://github.com/yourusername/csv-to-json",
-      externalLink: "https://your-demo-link.com",
     },
     {
-      type: "Mini App",
-      title: "Image Resizer",
+      type: "NewHacks 2023 Project",
+      title: "CrisisCompass - Web App",
       description:
-        "A Python/Flask-based microservice that resizes images to multiple dimensions on the fly.",
-      technologies: ["Python", "Flask", "AWS"],
+        "CrisisCompass is a web app that helps first responders manage emergencies by gathering real-time data from social media, news, and alerts, through web-scraping. It displays this information on a React dashboard with clear labels for urgency and severity, using Flask and Axios to process and update data quickly.",
+      technologies: ["Python", "Flask", "JavaScript", "React", "MongoDB"],
       githubLink: "https://github.com/yourusername/image-resizer",
       externalLink: "https://your-image-resizer-demo.com",
     },
     {
-      type: "Mini App",
-      title: "Image Resizer",
+      type: "2D Java Game",
+      title: "The HolyGrail",
       description:
-        "A Python/Flask-based microservice that resizes images to multiple dimensions on the fly.",
-      technologies: ["Python", "Flask", "AWS"],
+        "HolyGrail is a top-down 2D adventure game built in Java. Players navigate through a dynamic world, battling enemies, collecting the Holy Grail, and restoring peace. The game features random enemy spawning, a multi-class object-oriented structure for efficient code organization, and timers for gameplay mechanics like enemy movement and attack intervals. The project demonstrates skills in game design, Java programming, and implementing interactive gameplay systems.",
+      technologies: ["Java", "Java Swing"],
       githubLink: "https://github.com/yourusername/image-resizer",
-      externalLink: "https://your-image-resizer-demo.com",
     },
     {
-      type: "Mini App",
-      title: "Image Resizer",
+      type: "Project Studio Course - ECE 198",
+      title: "SecureEdu",
       description:
-        "A Python/Flask-based microservice that resizes images to multiple dimensions on the fly.",
-      technologies: ["Python", "Flask", "AWS"],
+        "SecureEdu is an encrypted educational platform utilizing STM32 Nucleo microcontrollers and AES-128/256 encryption to securely distribute textbook sections and hints. Features include a 4x4 keypad for access key entry, LCD displays with real-time feedback, and UART-based communication for reliable operations. The platform emphasizes secure content management, real-time interaction, and encryption, enhancing independent learning and minimizing unauthorized sharing.",
+      technologies: ["C/C++", "STM32", "Hardware Design"],
       githubLink: "https://github.com/yourusername/image-resizer",
       externalLink: "https://your-image-resizer-demo.com",
     }
@@ -720,8 +709,10 @@ const Header = () => {
                         </span>
                         Virtual Labs (previously known as Ontropy) was my first internship, where I got to
                         learn about blockchain, smart contracts, and how it
-                        connects with game development.
+                        connects with game development. Working with José Betancourt, former Yale student, and his team of Harvard-educated software engineers was an eye-opening experience.                      
                       </li>
+        
+
                       <li
                         className={`flex gap-3 ${
                           darkMode ? "text-gray-300" : "text-gray-400"
@@ -730,10 +721,22 @@ const Header = () => {
                         <span className="text-[#9448ff] text-[18px] mt-1">
                           ▹
                         </span>
-                        I worked on integrating their Unity SDK by creating my own 3D FPS in
-                        Unity. I identified and reported bugs to the team before
-                        their Unity SDK was released.
+                        During my time there, I integrated their Unity Software Development Kit by developing a 3D First-Person Shooter in Unity, incorporating an in-game currency powered by smart contracts and blockchain technology. I identified and reported bugs or issues to the team prior to the Unity SDK's market release.
                       </li>
+
+
+                      <li
+                        className={`flex gap-3 ${
+                          darkMode ? "text-gray-300" : "text-gray-400"
+                        } text-lg font-medium`}
+                      >
+                        <span className="text-[#9448ff] text-[18px] mt-1">
+                          ▹
+                        </span>
+
+                                    In the end, I learned a lot about cryptography, blockchain, and game development, and I got a better understanding of how cryptocurrency works. I also had the chance to meet a team of cryptography experts with PhDs, and talking to them was really inspiring.        
+                                              
+                                              </li>
                     </ul>
                     <div className="flex flex-wrap gap-2">
                       {["Unity", "C#", "Solidity", "Git"].map((skill) => (
@@ -879,7 +882,7 @@ const Header = () => {
               </a>
 
               <a
-                href="https://devpost.com/Anahadd06"
+                href="https://devpost.com/Anahad06"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`hover:text-purple-500 transition-colors group ${

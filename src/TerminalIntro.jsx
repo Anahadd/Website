@@ -3,7 +3,7 @@ import { Home, Sun, Moon, Github, ExternalLink, Linkedin, Mail, Award } from 'lu
 import hosaImage from './models/hosa_healthcare.png'
 import p2 from './models/uniflow.png'
 import p3 from './models/chess.png'
-import prequellogo from './models/prequel_logo.png';
+import prequellogo from './models/prequel.png';
 import virtuallabs from './models/virtual_labs_logo.png';
 import keyturndigital from './models/virtual_labs_logo.png';
 
@@ -347,61 +347,79 @@ const Header = () => {
   return (
     <>
       {/* NAVBAR */}
-      <nav className={`fixed top-6 left-1/2 transform -translate-x-1/2 z-10 flex items-center transition-all duration-300 w-[95%] sm:w-auto ${visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}>
-        <div className={`logo-3d absolute hidden sm:block ${hasAnimated ? "animation-done" : ""}`}
+      <nav
+        className={`fixed top-6 left-1/2 transform -translate-x-1/2 z-10 flex items-center transition-all duration-300 w-[95%] sm:w-auto ${visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+          }`}
+      >
+        <div
+          className={`logo-3d absolute hidden sm:block ${hasAnimated ? "animation-done" : ""
+            }`}
           style={{ left: "-280px" }}
         ></div>
-        <div className={`${darkMode ? "bg-gray-800/90" : "bg-white"} rounded-full shadow-md px-4 sm:px-8 py-3 sm:py-4 flex items-center w-full sm:w-auto`}>
-          <div className="flex items-center justify-between w-full sm:justify-start sm:space-x-4">
-            <div className="flex items-center space-x-2">
-              <button
-                className="nav-link flex items-center"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
-                <Home className="w-5 h-5" />
-              </button>
-              <span className="text-gray-300 inline">/</span>
-              <button
-                className="nav-link text-sm sm:text-base"
-                onClick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })}
-              >
-                About
-              </button>
-            </div>
-
-            <div className="flex items-center space-x-2">
-              <span className="text-gray-300 inline">/</span>
-              <button
-                className="nav-link text-sm sm:text-base whitespace-nowrap"
-                onClick={() => document.getElementById("experience").scrollIntoView({ behavior: "smooth" })}
-              >
-                Work
-              </button>
-              <span className="text-gray-300 inline">/</span>
-              <button
-                className="nav-link text-sm sm:text-base"
-                onClick={() => document.getElementById("projects").scrollIntoView({ behavior: "smooth" })}
-              >
-                Projects
-              </button>
-            </div>
-
-            <div className="flex items-center space-x-2">
-              <span className="text-gray-300 inline">/</span>
-              <button
-                className="nav-link text-sm sm:text-base"
-                onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}
-              >
-                Contact
-              </button>
-              <span className="text-gray-300 inline">/</span>
-              <button onClick={toggleDarkMode} className="nav-link">
-                {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-              </button>
-            </div>
+        <div
+          className={`${darkMode ? "bg-gray-800/90" : "bg-white"
+            } rounded-full shadow-md px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between w-full sm:w-auto`}
+        >
+          <div className="flex items-center justify-center space-x-4">
+            <button
+              className="nav-link flex items-center"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              <Home className="w-5 h-5" />
+            </button>
+            <span className="text-gray-300">/</span>
+            <button
+              className="nav-link text-sm sm:text-base"
+              onClick={() =>
+                document.getElementById("about").scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              About
+            </button>
+            <span className="text-gray-300">/</span>
+            <button
+              className="nav-link text-sm sm:text-base"
+              onClick={() =>
+                document
+                  .getElementById("experience")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              {window.innerWidth <= 640 ? "Work" : "Work Experience"}
+            </button>
+            <span className="text-gray-300">/</span>
+            <button
+              className="nav-link text-sm sm:text-base"
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Projects
+            </button>
+            <span className="text-gray-300">/</span>
+            <button
+              className="nav-link text-sm sm:text-base"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Contact
+            </button>
+          </div>
+          <div className="ml-4 flex items-center">
+            <button onClick={toggleDarkMode} className="nav-link flex items-center">
+              {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
           </div>
         </div>
       </nav>
+
+
+
 
       {/* MAIN CONTENT WRAPPER */}
       <div
@@ -509,8 +527,7 @@ const Header = () => {
                     <img
                       src={prequellogo}
                       alt="Prequel Logo"
-                      className={`w-12 h-12 object-contain ml-4 transition-opacity ${darkMode ? 'opacity-90' : 'opacity-100'
-                        }`}
+                      className={`w-12 h-12 object-contain ml-4 transition-opacity ${darkMode ? 'opacity-90' : 'opacity-100'}`}
                     />
                   </div>
                   <div

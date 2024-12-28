@@ -348,75 +348,69 @@ const Header = () => {
     <>
       {/* NAVBAR */}
       <nav
-        className={`fixed top-6 left-1/2 transform -translate-x-1/2 z-10 flex items-center transition-all duration-300 w-[95%] sm:w-auto ${visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        className={`fixed top-6 left-1/2 transform -translate-x-1/2 z-10 flex items-center transition-all duration-300 w-[98%] sm:w-auto ${visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
           }`}
       >
+        {/* AD Logo */}
         <div
           className={`logo-3d absolute hidden sm:block ${hasAnimated ? "animation-done" : ""
             }`}
           style={{ left: "-280px" }}
         ></div>
+
         <div
           className={`${darkMode ? "bg-gray-800/90" : "bg-white"
-            } rounded-full shadow-md px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between w-full sm:w-auto`}
+            } rounded-full shadow-md w-full sm:w-auto`}
         >
-          <div className="flex items-center justify-center space-x-4">
-            <button
-              className="nav-link flex items-center"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              <Home className="w-5 h-5" />
-            </button>
-            <span className="text-gray-300">/</span>
-            <button
-              className="nav-link text-sm sm:text-base"
-              onClick={() =>
-                document.getElementById("about").scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              About
-            </button>
-            <span className="text-gray-300">/</span>
-            <button
-              className="nav-link text-sm sm:text-base"
-              onClick={() =>
-                document
-                  .getElementById("experience")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              {window.innerWidth <= 640 ? "Work" : "Work Experience"}
-            </button>
-            <span className="text-gray-300">/</span>
-            <button
-              className="nav-link text-sm sm:text-base"
-              onClick={() =>
-                document
-                  .getElementById("projects")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              Projects
-            </button>
-            <span className="text-gray-300">/</span>
-            <button
-              className="nav-link text-sm sm:text-base"
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              Contact
-            </button>
-          </div>
-          <div className="ml-4 flex items-center">
-            <button onClick={toggleDarkMode} className="nav-link flex items-center">
-              {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
+          <div className="px-2 sm:px-8 py-2 sm:py-4">
+            <div className="flex items-center justify-between gap-0.5 sm:gap-4">
+              <button
+                className="nav-link p-1"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                <Home className="w-3 sm:w-6 h-3 sm:h-6" />
+              </button>
+              <span className="text-gray-300 text-xs sm:text-base">/</span>
+              <button
+                className="nav-link text-[9px] sm:text-xl font-medium"
+                onClick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })}
+              >
+                About
+              </button>
+              <span className="text-gray-300 text-xs sm:text-base">/</span>
+              <button
+                className="nav-link text-[9px] sm:text-xl whitespace-nowrap font-medium"
+                onClick={() => document.getElementById("experience").scrollIntoView({ behavior: "smooth" })}
+              >
+                {window.innerWidth <= 640 ? "Work" : "Work Experience"}
+              </button>
+              <span className="text-gray-300 text-xs sm:text-base">/</span>
+              <button
+                className="nav-link text-[9px] sm:text-xl font-medium"
+                onClick={() => document.getElementById("projects").scrollIntoView({ behavior: "smooth" })}
+              >
+                Projects
+              </button>
+              <span className="text-gray-300 text-xs sm:text-base">/</span>
+              <button
+                className="nav-link text-[9px] sm:text-xl font-medium"
+                onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}
+              >
+                Contact
+              </button>
+              <span className="text-gray-300 text-xs sm:text-base">/</span>
+              <button onClick={toggleDarkMode} className="nav-link p-1">
+                {darkMode ? (
+                  <Sun className="w-3 sm:w-6 h-3 sm:h-6" />
+                ) : (
+                  <Moon className="w-3 sm:w-6 h-3 sm:h-6" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </nav>
+
 
 
 

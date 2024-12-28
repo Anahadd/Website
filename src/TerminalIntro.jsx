@@ -5,7 +5,7 @@ import p2 from './models/uniflow.png'
 import p3 from './models/chess.png'
 import prequellogo from './models/prequel.png';
 import virtuallabs from './models/virtual_labs_logo.png';
-import keyturndigital from './models/virtual_labs_logo.png';
+import keyturndigital from './models/keyturn.png';
 
 const Header = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -13,6 +13,8 @@ const Header = () => {
   const [visible, setVisible] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
   const [showMore, setShowMore] = useState(false);
+  const [hasMainProjectsAnimated, setHasMainProjectsAnimated] = useState(false);
+
 
   // Main Projects
   const mainProjects = [
@@ -140,6 +142,25 @@ const Header = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasMainProjectsAnimated) {
+            setHasMainProjectsAnimated(true);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const projectElements = document.querySelectorAll(".main-project");
+    projectElements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [hasMainProjectsAnimated]);
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate-reveal");
           }
@@ -203,7 +224,7 @@ const Header = () => {
     const reverseLayout = index % 2 === 1;
 
     return (
-      <div key={index} className="relative grid md:grid-cols-12 gap-8 items-start">
+      <div key={index} className="relative grid md:grid-cols-12 gap-4 sm:gap-8 items-start animate-slide-in">
         {/* Column A: Image + Title + Links */}
         <div
           className={`md:col-span-6 relative group ${reverseLayout ? "order-2 md:order-1" : ""
@@ -284,9 +305,10 @@ const Header = () => {
     return (
       <div
         key={index}
-        className={`p-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] ${darkMode ? "bg-gray-800/50" : "bg-white"
-          } shadow-lg hover:shadow-xl`}
+        className={`relative grid md:grid-cols-12 gap-4 sm:gap-8 items-start ${hasMainProjectsAnimated ? "animate-slide-in" : ""
+          } main-project`}
       >
+
         <div className="flex items-center justify-between mb-4">
           <span className="text-purple-500 text-xl font-bold">
             {project.type}
@@ -411,10 +433,6 @@ const Header = () => {
         </div>
       </nav>
 
-
-
-
-
       {/* MAIN CONTENT WRAPPER */}
       <div
         className={`${darkMode ? "bg-[#1a1a2e]" : "bg-gray-50"
@@ -516,16 +534,26 @@ const Header = () => {
               {/* Timeline Item 1 - Prequel */}
               <div className="timeline-item flex flex-col md:flex-row md:justify-start w-full">
                 <div className="w-full md:w-[700px] md:pr-16 relative">
-                  <div className="hidden md:flex absolute right-0 top-1/2 transform translate-x-4 -translate-y-1/2 items-center">
-                    <div className="w-6 h-1 bg-gradient-to-r from-[#9448ff] to-[#c861ff]" />
+
+                  {/* Purple horizontal line, visible only in desktop view */}
+                  <div className="hidden md:block absolute right-[20px] top-[45%] transform -translate-y-1/2">
+                    <div className="h-1 w-[60px] bg-[#9448ff]" />
+                  </div>
+
+                  {/* Prequel logo */}
+                  <div className="hidden md:flex absolute right-[-400px] top-[45%] transform translate-x-0 -translate-y-1/2 items-center">
                     <img
                       src={prequellogo}
                       alt="Prequel Logo"
-                      className={`w-12 h-12 object-contain ml-4 transition-opacity ${darkMode ? 'opacity-90' : 'opacity-100'}`}
+                      style={{
+                        width: "350px",
+                        height: "350px",
+                      }}
                     />
                   </div>
+
                   <div
-                    className={`${darkMode ? "bg-gray-800" : "bg-white"
+                    className={`${darkMode ? 'bg-gray-800' : 'bg-white'
                       } p-5 sm:p-7 rounded-xl shadow-lg hover:shadow-xl transition-shadow`}
                   >
                     <div className="text-gray-400 text-sm sm:text-base font-medium mb-2">
@@ -534,7 +562,7 @@ const Header = () => {
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="flex items-center flex-wrap text-xl sm:text-2xl font-bold">
                         <div className="flex items-center gap-2 flex-wrap">
-                          <span className={darkMode ? "text-white" : "text-gray-900"}>
+                          <span className={darkMode ? 'text-white' : 'text-gray-900'}>
                             Software Engineer Intern @
                           </span>
                           <a
@@ -551,7 +579,7 @@ const Header = () => {
                     </div>
                     <ul className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
                       <li
-                        className={`flex gap-3 ${darkMode ? "text-gray-300" : "text-gray-400"
+                        className={`flex gap-3 ${darkMode ? 'text-gray-300' : 'text-gray-400'
                           } text-base sm:text-lg font-medium`}
                       >
                         <span className="text-[#9448ff] text-[16px] sm:text-[18px] mt-1 flex-shrink-0">
@@ -560,7 +588,7 @@ const Header = () => {
                         At Prequel, I worked closely with their Software Engineers to further develop their AI model, Poppy, as well as to create new features for their website. I learned some pretty cool things, ranging from web design to product analytics.
                       </li>
                       <li
-                        className={`flex gap-3 ${darkMode ? "text-gray-300" : "text-gray-400"
+                        className={`flex gap-3 ${darkMode ? 'text-gray-300' : 'text-gray-400'
                           } text-base sm:text-lg font-medium`}
                       >
                         <span className="text-[#9448ff] text-[16px] sm:text-[18px] mt-1 flex-shrink-0">
@@ -569,7 +597,7 @@ const Header = () => {
                         During my time, I developed a genetic algorithm that streamlined team assignments, saving up to 10 hours for student coordinators. I also trained their model by vector indexing over 30 hours of start-up meeting data, significantly improving its accuracy, and wrote a report analyzing the model's performance under various conditions.
                       </li>
                       <li
-                        className={`flex gap-3 ${darkMode ? "text-gray-300" : "text-gray-400"
+                        className={`flex gap-3 ${darkMode ? 'text-gray-300' : 'text-gray-400'
                           } text-base sm:text-lg font-medium`}
                       >
                         <span className="text-[#9448ff] text-[16px] sm:text-[18px] mt-1 flex-shrink-0">
@@ -580,18 +608,18 @@ const Header = () => {
                     </ul>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        "React",
-                        "Typescript",
-                        "PostgresSQL",
-                        "Python",
-                        "Git",
-                        "UI/UX",
+                        'React',
+                        'Typescript',
+                        'PostgresSQL',
+                        'Python',
+                        'Git',
+                        'UI/UX',
                       ].map((skill) => (
                         <span
                           key={skill}
                           className={`px-2 sm:px-3 py-1 text-sm sm:text-base font-medium rounded-full ${darkMode
-                            ? "bg-purple-500/10 text-purple-300"
-                            : "bg-purple-500/5 text-purple-600"
+                            ? 'bg-purple-500/10 text-purple-300'
+                            : 'bg-purple-500/5 text-purple-600'
                             }`}
                         >
                           {skill}
@@ -602,17 +630,26 @@ const Header = () => {
                 </div>
               </div>
 
+
               {/* Timeline Item 2 - Virtual Labs */}
               <div className="timeline-item flex flex-col md:flex-row md:justify-end w-full">
                 <div className="w-full md:w-[700px] md:pl-16 relative md:mr-[10%]">
 
-                  <div className="hidden md:flex absolute left-0 top-1/2 transform -translate-x-4 -translate-y-1/2 items-center">
+                  {/* Purple horizontal line, visible only in desktop view */}
+                  <div className="hidden md:block absolute left-[20px] top-[50%] transform -translate-y-1/2">
+                    <div className="h-1 w-[60px] bg-[#9448ff]" />
+                  </div>
+
+                  {/* Virtual Labs logo */}
+                  <div className="hidden md:flex absolute left-[-370px] top-[46%] transform translate-x-0 -translate-y-1/2 items-center">
                     <img
                       src={virtuallabs}
                       alt="Virtual Labs Logo"
-                      className="w-8 h-8 object-contain mr-2"
+                      style={{
+                        width: "350px",
+                        height: "350px",
+                      }}
                     />
-                    <div className="w-6 h-1 bg-gradient-to-l from-[#9448ff] to-[#c861ff]" />
                   </div>
 
                   <div
@@ -670,7 +707,7 @@ const Header = () => {
                       </li>
                     </ul>
                     <div className="flex flex-wrap gap-2">
-                      {["Unity", "C#", "Solidity", "Blockchain"].map((skill) => (
+                      {["Unity", "C#", "Solidity", "Blockchain", "Game Development", "Crypto"].map((skill) => (
                         <span
                           key={skill}
                           className={`px-2 sm:px-3 py-1 text-sm sm:text-base font-medium rounded-full ${darkMode
@@ -686,17 +723,29 @@ const Header = () => {
                 </div>
               </div>
 
+
+
               {/* Timeline Item 3 - KeyTurn Digital */}
               <div className="timeline-item flex flex-col md:flex-row md:justify-start w-full">
                 <div className="w-full md:w-[700px] md:pr-16 relative">
-                  <div className="hidden md:flex absolute right-0 top-1/2 transform translate-x-4 -translate-y-1/2 items-center">
-                    <div className="w-6 h-1 bg-gradient-to-r from-[#9448ff] to-[#c861ff]" />
+
+                  {/* Purple horizontal line, visible only in desktop view */}
+                  <div className="hidden md:block absolute right-[20px] top-[45%] transform -translate-y-1/2">
+                    <div className="h-1 w-[60px] bg-[#9448ff]" />
+                  </div>
+
+                  {/* KeyTurn Digital logo, visible only in desktop view */}
+                  <div className="hidden md:flex absolute right-[-540px] top-[45%] transform translate-x-0 -translate-y-1/2 items-center">
                     <img
                       src={keyturndigital}
                       alt="KeyTurn Digital Logo"
-                      className="w-8 h-8 object-contain ml-2"
+                      style={{
+                        width: "700px",
+                        height: "700px",
+                      }}
                     />
                   </div>
+
                   <div
                     className={`${darkMode ? "bg-gray-800" : "bg-white"
                       } p-5 sm:p-7 rounded-xl shadow-lg hover:shadow-xl transition-shadow`}
@@ -740,7 +789,7 @@ const Header = () => {
                         <span className="text-[#9448ff] text-[16px] sm:text-[18px] mt-1 flex-shrink-0">
                           ▹
                         </span>
-                        Generated over $500 in revenue within 10 weeks and pitched to investors for $10K funding opportunity. Participated in exclusive mentorship sessions with industry leaders, including the CEO of Databricks and experienced software engineers from top tech companies.
+                        Generated over $550 in revenue within 5 weeks and pitched to investors for $10K funding opportunity. Participated in exclusive mentorship sessions with industry leaders, including the CEO of Databricks and experienced software engineers from top tech companies.
                       </li>
                     </ul>
                     <div className="flex flex-wrap gap-2">
@@ -765,6 +814,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </section>
@@ -789,8 +839,10 @@ const Header = () => {
             {mainProjects.map((project, index) => (
               <div
                 key={index}
-                className="relative grid md:grid-cols-12 gap-4 sm:gap-8 items-start"
+                className={`relative grid md:grid-cols-12 gap-4 sm:gap-8 items-start ${hasMainProjectsAnimated ? "animate-slide-in" : ""
+                  } main-project`}
               >
+
                 {/* Column A: Image + Title + Links */}
                 <div
                   className={`md:col-span-6 relative group ${index % 2 === 1 ? "order-2 md:order-1" : ""
@@ -897,7 +949,7 @@ const Header = () => {
           {/* Additional Projects */}
           <div className="mt-20 sm:mt-32">
             {showMore && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 animate-reveal">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 animate-slide-in">
                 {additionalProjects.map((project, index) => (
                   <div
                     key={index}
@@ -1108,6 +1160,22 @@ const Header = () => {
           transition: transform 0.2s, color 0.2s ease-in-out;
           cursor: pointer;
         }
+
+        @keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
 
         .nav-link:hover {
           transform: scale(1.02);

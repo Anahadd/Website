@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Home,
-  Sun,
-  Moon,
-  Github,
-  ExternalLink,
-  Linkedin,
-  Mail,
-  Award
-} from 'lucide-react';
+import { Home, Sun, Moon, Github, ExternalLink, Linkedin, Mail, Award } from 'lucide-react';
 import hosaImage from './models/hosa_healthcare.png'
 import p2 from './models/uniflow.png'
 import p3 from './models/chess.png'
+import prequellogo from './models/prequel_logo.png';
+import virtuallabs from './models/virtual_labs_logo.png';
+import keyturndigital from './models/virtual_labs_logo.png';
 
 const Header = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -50,8 +44,7 @@ const Header = () => {
         "CryptoChess is a decentralized platform that enables users to create and manage smart contracts based on the outcomes of chess games. Leveraging blockchain technology for secure and transparent transactions, the platform integrates with popular online chess platform, Lichess, to automatically verify game results. Users can engage in betting, organize tournaments, and participate in community governance through a DAO, ensuring a fair and innovative chess ecosystem.",
       image: p3,
       award: {
-        icon: "♟️",
-        text: "Featured Blockchain Project",
+        text: "♟️ Featured Blockchain Project",
       },
       technologies: [
         "Solidity",
@@ -509,9 +502,10 @@ const Header = () => {
                   <div className="hidden md:flex absolute right-0 top-1/2 transform translate-x-4 -translate-y-1/2 items-center">
                     <div className="w-6 h-1 bg-gradient-to-r from-[#9448ff] to-[#c861ff]" />
                     <img
-                      src="/src/models/prequel_logo.png"
+                      src={prequellogo}
                       alt="Prequel Logo"
-                      className="w-8 h-8 object-contain ml-2"
+                      className={`w-12 h-12 object-contain ml-4 transition-opacity ${darkMode ? 'opacity-90' : 'opacity-100'
+                        }`}
                     />
                   </div>
                   <div
@@ -598,7 +592,7 @@ const Header = () => {
 
                   <div className="hidden md:flex absolute left-0 top-1/2 transform -translate-x-4 -translate-y-1/2 items-center">
                     <img
-                      src="/models/virtual_labs_logo.png"
+                      src={virtuallabs}
                       alt="Virtual Labs Logo"
                       className="w-8 h-8 object-contain mr-2"
                     />
@@ -682,7 +676,7 @@ const Header = () => {
                   <div className="hidden md:flex absolute right-0 top-1/2 transform translate-x-4 -translate-y-1/2 items-center">
                     <div className="w-6 h-1 bg-gradient-to-r from-[#9448ff] to-[#c861ff]" />
                     <img
-                      src="/company-logos/keyturn.png"
+                      src={keyturndigital}
                       alt="KeyTurn Digital Logo"
                       className="w-8 h-8 object-contain ml-2"
                     />
@@ -1187,3 +1181,4 @@ const Header = () => {
 };
 
 export default Header;
+

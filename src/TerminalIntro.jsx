@@ -483,7 +483,7 @@ const Header = () => {
                 <br />
                 I'm always looking to connect with people who share my passion. If you're interested in collaborating on a project or just want to chat, feel free to reach out! Also, check out {' '}
                 <a
-                  href="https://blog-mjmc-6u6r6278p-anahadd006-gmailcoms-projects.vercel.app/"
+                  href="https://blog-mjmc.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-purple-500 hover:text-purple-400 transition-colors underline"

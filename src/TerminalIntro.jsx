@@ -483,7 +483,7 @@ const Header = () => {
                 <br />
                 I'm always looking to connect with people who share my passion. If you're interested in collaborating on a project or just want to chat, feel free to reach out! Also, check out {' '}
                 <a
-                  href="https://your-blog-url-here"
+                  href="https://blog-mjmc-6u6r6278p-anahadd006-gmailcoms-projects.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-purple-500 hover:text-purple-400 transition-colors underline"
@@ -541,13 +541,13 @@ const Header = () => {
                   </div>
 
                   {/* Prequel logo */}
-                  <div className="hidden md:flex absolute right-[-400px] top-[45%] transform translate-x-0 -translate-y-1/2 items-center">
+                  <div className="hidden md:flex absolute right-[-275px] top-[45%] transform translate-x-0 -translate-y-1/2 items-center">
                     <img
                       src={prequellogo}
                       alt="Prequel Logo"
                       style={{
-                        width: "350px",
-                        height: "350px",
+                        width: "250px",
+                        height: "250px",
                       }}
                     />
                   </div>
@@ -641,13 +641,13 @@ const Header = () => {
                   </div>
 
                   {/* Virtual Labs logo */}
-                  <div className="hidden md:flex absolute left-[-370px] top-[46%] transform translate-x-0 -translate-y-1/2 items-center">
+                  <div className="hidden md:flex absolute left-[-275px] top-[46%] transform translate-x-0 -translate-y-1/2 items-center">
                     <img
                       src={virtuallabs}
                       alt="Virtual Labs Logo"
                       style={{
-                        width: "350px",
-                        height: "350px",
+                        width: "250px",
+                        height: "250px",
                       }}
                     />
                   </div>
@@ -735,13 +735,13 @@ const Header = () => {
                   </div>
 
                   {/* KeyTurn Digital logo, visible only in desktop view */}
-                  <div className="hidden md:flex absolute right-[-540px] top-[45%] transform translate-x-0 -translate-y-1/2 items-center">
+                  <div className="hidden md:flex absolute right-[-380px] top-[45%] transform translate-x-0 -translate-y-1/2 items-center">
                     <img
                       src={keyturndigital}
                       alt="KeyTurn Digital Logo"
                       style={{
-                        width: "700px",
-                        height: "700px",
+                        width: "500px",
+                        height: "500px",
                       }}
                     />
                   </div>
@@ -789,7 +789,7 @@ const Header = () => {
                         <span className="text-[#9448ff] text-[16px] sm:text-[18px] mt-1 flex-shrink-0">
                           ▹
                         </span>
-                        Generated over $550 in revenue within 5 weeks and pitched to investors for $10K funding opportunity. Participated in exclusive mentorship sessions with industry leaders, including the CEO of Databricks and experienced software engineers from top tech companies.
+                        Generated over $550 in revenue within 5 weeks and pitched to investors for $10K funding opportunity. Participated in exclusive mentorship sessions with industry leaders, including the founder of Mixer and experienced software engineers from top tech companies.
                       </li>
                     </ul>
                     <div className="flex flex-wrap gap-2">

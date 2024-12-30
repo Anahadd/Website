@@ -6,6 +6,8 @@ import p3 from './models/chess.png'
 import prequellogo from './models/prequel_black.png';
 import virtuallabs from './models/virtual_labs_logo.png';
 import keyturndigital from './models/keyturn.png';
+import Button from './Button';
+
 
 const Header = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -412,6 +414,13 @@ const Header = () => {
                 onClick={() => document.getElementById("projects").scrollIntoView({ behavior: "smooth" })}
               >
                 Projects
+              </button>
+              <span className="text-gray-300 text-xs sm:text-base">/</span>
+              <button
+                className="nav-link text-[9px] sm:text-xl whitespace-nowrap font-medium"
+                onClick={() => (window.location.href = 'https://blog-mjmc.vercel.app/', '_blank')}
+              >
+                {window.innerWidth <= 640 ? "Blog" : "My Blog"}
               </button>
               <span className="text-gray-300 text-xs sm:text-base">/</span>
               <button

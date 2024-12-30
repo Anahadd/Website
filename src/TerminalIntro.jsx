@@ -3,7 +3,7 @@ import { Home, Sun, Moon, Github, ExternalLink, Linkedin, Mail, Award } from 'lu
 import hosaImage from './models/hosa_healthcare.png'
 import p2 from './models/uniflow.png'
 import p3 from './models/chess.png'
-import prequellogo from './models/prequel.png';
+import prequellogo from './models/prequel_black.png';
 import virtuallabs from './models/virtual_labs_logo.png';
 import keyturndigital from './models/keyturn.png';
 
@@ -475,7 +475,7 @@ const Header = () => {
                 className={`text-lg sm:text-2xl font-medium leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'
                   }`}
               >
-                Hi! I'm an 18-year-old student at UWaterloo. I grew up in Brampton and recently moved to Caledon. My love for programming started with creating 2D games in Java and evolved into building 3D games in Unity.
+                Hi! I'm an 18-year-old student at UWaterloo. My love for programming started with creating 2D games in Java and evolved into building 3D games in Unity.
                 <br />
                 <br />
                 When I'm not coding, I enjoy gaming, binge-watching shows, and following Formula 1 (let's go McLaren!). I love playing games like Fortnite and Rocket League. I also love participating in hackathons, since it lets me collaborate with others, tackle challenges, and build cool projects.
@@ -541,13 +541,13 @@ const Header = () => {
                   </div>
 
                   {/* Prequel logo */}
-                  <div className="hidden md:flex absolute right-[-275px] top-[45%] transform translate-x-0 -translate-y-1/2 items-center">
+                  <div className="hidden md:flex absolute right-[-460px] top-[45%] transform translate-x-0 -translate-y-1/2 items-center">
                     <img
                       src={prequellogo}
                       alt="Prequel Logo"
                       style={{
-                        width: "250px",
-                        height: "250px",
+                        width: "575px",
+                        height: "750px",
                       }}
                     />
                   </div>

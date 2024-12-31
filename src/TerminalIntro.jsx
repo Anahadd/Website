@@ -3,11 +3,11 @@ import { Home, Sun, Moon, Github, ExternalLink, Linkedin, Mail, Award } from 'lu
 import hosaImage from './models/hosa_healthcare.png'
 import p2 from './models/uniflow.png'
 import p3 from './models/chess.png'
-import prequellogo from './models/prequel_black.png';
 import virtuallabs from './models/virtual_labs_logo.png';
 import keyturndigital from './models/keyturn.png';
 import Button from './Button';
-
+import prequel_b from './models/prequel_black.png';
+import prequel_w from './models/prequel_white.png';
 
 const Header = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -552,11 +552,11 @@ const Header = () => {
                   {/* Prequel logo */}
                   <div className="hidden md:flex absolute right-[-460px] top-[45%] transform translate-x-0 -translate-y-1/2 items-center">
                     <img
-                      src={prequellogo}
+                      src={darkMode ? prequel_b : prequel_w}
                       alt="Prequel Logo"
                       style={{
-                        width: "575px",
-                        height: "750px",
+                        width: darkMode ? "250px" : "575px",
+                        height: darkMode ? "250px" : "750px",
                       }}
                     />
                   </div>

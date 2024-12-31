@@ -5,7 +5,6 @@ import p2 from './models/uniflow.png'
 import p3 from './models/chess.png'
 import virtuallabs from './models/virtual_labs_logo.png';
 import keyturndigital from './models/keyturn.png';
-import Button from './Button';
 import prequel_b from './models/prequel_black.png';
 import prequel_w from './models/prequel_white.png';
 
@@ -550,16 +549,25 @@ const Header = () => {
                   </div>
 
                   {/* Prequel logo */}
-                  <div className="hidden md:flex absolute right-[-460px] top-[45%] transform translate-x-0 -translate-y-1/2 items-center">
+                  {/* Prequel logo */}
+                  {/* Prequel logo */}
+                  <div
+                    className="hidden md:flex absolute top-[45%] transform translate-x-0 -translate-y-1/2 items-center"
+                    style={{
+                      right: darkMode ? "-315px" : "-460px", // Same alignment for both modes
+                    }}
+                  >
                     <img
                       src={darkMode ? prequel_b : prequel_w}
                       alt="Prequel Logo"
                       style={{
-                        width: darkMode ? "250px" : "575px",
-                        height: darkMode ? "250px" : "750px",
+                        width: darkMode ? "275px" : "553px",
+                        height: darkMode ? "275px" : "775px",
                       }}
                     />
                   </div>
+
+
 
                   <div
                     className={`${darkMode ? 'bg-gray-800' : 'bg-white'

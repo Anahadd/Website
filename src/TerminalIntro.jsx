@@ -6,7 +6,7 @@ import p3 from './models/chess.png'
 import virtuallabs from './models/virtual_labs_logo.png';
 import keyturndigital from './models/keyturn.png';
 import prequel_b from './models/prequel_black.png';
-import prequel_w from './models/prequel_white.png';
+import prequel_w from './models/blackb.png';
 import anahadPhoto from './models/anahad.png';
 
 const Header = () => {
@@ -560,15 +560,15 @@ const Header = () => {
                   <div
                     className="hidden md:flex absolute top-[45%] transform translate-x-0 -translate-y-1/2 items-center"
                     style={{
-                      right: darkMode ? "-315px" : "-460px", // Same alignment for both modes
+                      right: darkMode ? "-315px" : "-315px",
                     }}
                   >
                     <img
                       src={darkMode ? prequel_b : prequel_w}
                       alt="Prequel Logo"
                       style={{
-                        width: darkMode ? "275px" : "553px",
-                        height: darkMode ? "275px" : "775px",
+                        width: darkMode ? "275px" : "300px",
+                        height: darkMode ? "275px" : "300px",
                       }}
                     />
                   </div>

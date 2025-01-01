@@ -7,6 +7,7 @@ import virtuallabs from './models/virtual_labs_logo.png';
 import keyturndigital from './models/keyturn.png';
 import prequel_b from './models/prequel_black.png';
 import prequel_w from './models/prequel_white.png';
+import anahadPhoto from './models/anahad.png';
 
 const Header = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -507,11 +508,16 @@ const Header = () => {
             <div className="relative group mt-8 sm:mt-0">
               <div className="relative rounded-lg overflow-hidden">
                 <div className="absolute inset-0 bg-purple-500/10 group-hover:bg-transparent transition-all duration-300"></div>
+
                 <img
-                  src="/api/placeholder/500/600"
+                  src={anahadPhoto}
                   alt="Anahad Dhaliwal"
-                  className="w-full rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full rounded-lg object-cover transition-transform duration-300 group-hover:scale-105 glow-border"
                 />
+
+
+
+
               </div>
             </div>
           </div>
@@ -1146,6 +1152,27 @@ const Header = () => {
           overflow-x: hidden;
           height: 100%;
         }
+
+        .glow-effect {
+    box-shadow: 0 0 10px rgba(148, 72, 255, 0.8), 0 0 20px rgba(148, 72, 255, 0.6), 0 0 30px rgba(148, 72, 255, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .glow-border {
+    border: 5px solid transparent;
+    border-radius: 12px; /* Adjust to match the image rounding */
+    box-shadow: 0 0 10px rgba(148, 72, 255, 0.8), 
+                0 0 20px rgba(148, 72, 255, 0.6), 
+                0 0 30px rgba(148, 72, 255, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  .glow-border:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(148, 72, 255, 1), 
+                0 0 30px rgba(148, 72, 255, 0.8), 
+                0 0 45px rgba(148, 72, 255, 0.6);
+  }
 
         body {
           margin: 0;

@@ -36,6 +36,7 @@ const Header = () => {
         "React",
         "Node.js",
         "OpenAI API",
+        "TensorFlow",
         "Google Cloud Platform",
       ],
       githubLink: "https://github.com/yourusername/halcyon-theme",

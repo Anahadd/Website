@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Home, Sun, Moon, Github, ExternalLink, Linkedin, Mail, Award } from 'lucide-react';
 import hosaImage from './models/hosa_healthcare.png'
 import p2 from './models/uniflow.png'
-import p3 from './models/chess.png'
+import p3 from './models/a.png'
 import virtuallabs from './models/virtual_labs_logo.png';
 import keyturndigital from './models/keyturn.png';
 import prequel_b from './models/prequel_black.png';
@@ -44,23 +44,21 @@ const Header = () => {
         "https://drive.google.com/file/d/1FpdQ81B61yNbiCV0ve0V_cmMlgUMntKR/view?usp=sharing",
     },
     {
-      title: "CryptoChess - Blockchain App",
-      description:
-        "CryptoChess is a decentralized platform that enables users to create and manage smart contracts based on the outcomes of chess games. Leveraging blockchain technology for secure and transparent transactions, the platform integrates with popular online chess platform, Lichess, to automatically verify game results. Users can engage in betting, organize tournaments, and participate in community governance through a DAO, ensuring a fair and innovative chess ecosystem.",
+      title: "NeuralConnect - Ed-Tech AI App",
+      description: "NeuralConnect is an innovative ed-tech platform designed to simplify the creation and understanding of neural networks. Inspired by Scratch, our drag-and-drop interface makes AI and machine learning accessible to beginners. Through interactive tutorials and real-time explanations, users can build, visualize, and train neural networks without diving into complex code. NeuralConnect leverages cutting-edge technologies like PyTorch, TensorFlow, and OpenAI’s API to provide a seamless learning experience, empowering students and enthusiasts to explore the world of AI with ease.",
       image: p3,
       award: {
-        text: "♟️ Featured Blockchain Project",
+        "text": "GeeseHacks SPUR Fund Winner - $1000"
       },
       technologies: [
-        "Solidity",
-        "Ethereum",
-        "React.js",
-        "Node.js",
-        "Web3.js",
+        "NextJS",
+        "Flask",
+        "PyTorch",
+        "TensorFlow",
+        "OpenAI API"
       ],
-      githubLink: "https://github.com/Anahadd/CryptoChess",
+      githubLink: "https://devpost.com/software/neural-connect",
     },
-
     {
       title: "UniFlow - AI Coaching App",
       description:

@@ -1116,7 +1116,7 @@ const Header = () => {
 
               {/* Devpost */}
               <a
-                href="https://devpost.com/Anahad06"
+                href="https://devpost.com/anahad-dhaliwal06"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`hover:text-purple-500 transition-colors group ${darkMode ? "text-gray-300" : "text-gray-600"
